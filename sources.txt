@@ -1,6 +1,8 @@
+src/Main.java
 src/calculator/OperationStrategy.java
 src/calculator/Calculator.java
 src/calculator/AdditionStrategy.java
 src/calculator/SubtractionStrategy.java
 src/calculator/MultiplicationStrategy.java
-src/Main.java
+src/calculator/DivisionStrategy.java
+src/demo/DivisionDemo.java
