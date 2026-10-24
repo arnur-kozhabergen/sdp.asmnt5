@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="calculator-strategy" name="Strategy">
+    <mxGraphModel dx="1700" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main" value="&amp;laquo;Client&amp;raquo;&lt;br&gt;&lt;b&gt;Main&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="180" y="50" width="420" height="86" />
+        </mxCell>
+        <mxCell id="main-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ main(args: String[]): void&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="main">
+          <mxGeometry as="geometry" y="50" width="420" height="36" />
+        </mxCell>
+        <mxCell id="demo" value="&amp;laquo;Client&amp;raquo;&lt;br&gt;&lt;b&gt;DivisionDemo&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="770" y="50" width="420" height="86" />
+        </mxCell>
+        <mxCell id="demo-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ main(args: String[]): void&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="demo">
+          <mxGeometry as="geometry" y="50" width="420" height="36" />
+        </mxCell>
+        <mxCell id="context" value="&amp;laquo;Context&amp;raquo;&lt;br&gt;&lt;b&gt;Calculator&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="180" y="270" width="610" height="168" />
+        </mxCell>
+        <mxCell id="context-body" value="&lt;div style=&quot;padding:6px 8px;border-bottom:1px solid #333333&quot;&gt;- strategy: OperationStrategy&lt;/div&gt;&lt;div style=&quot;padding:6px 8px&quot;&gt;+ Calculator(strategy: OperationStrategy)&lt;br&gt;+ setStrategy(strategy: OperationStrategy): void&lt;br&gt;+ calculate(left: double, right: double): double&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="context">
+          <mxGeometry as="geometry" y="50" width="610" height="118" />
+        </mxCell>
+        <mxCell id="strategy" value="&amp;laquo;interface&amp;raquo;&lt;br&gt;&lt;b&gt;OperationStrategy&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="980" y="300" width="540" height="86" />
+        </mxCell>
+        <mxCell id="strategy-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ execute(left: double, right: double): double&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="strategy">
+          <mxGeometry as="geometry" y="50" width="540" height="36" />
+        </mxCell>
+        <mxCell id="add" value="&amp;laquo;Concrete Strategy&amp;raquo;&lt;br&gt;&lt;b&gt;AdditionStrategy&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="680" width="390" height="86" />
+        </mxCell>
+        <mxCell id="add-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ execute(left: double, right: double): double&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="add">
+          <mxGeometry as="geometry" y="50" width="390" height="36" />
+        </mxCell>
+        <mxCell id="subtract" value="&amp;laquo;Concrete Strategy&amp;raquo;&lt;br&gt;&lt;b&gt;SubtractionStrategy&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="450" y="680" width="390" height="86" />
+        </mxCell>
+        <mxCell id="subtract-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ execute(left: double, right: double): double&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="subtract">
+          <mxGeometry as="geometry" y="50" width="390" height="36" />
+        </mxCell>
+        <mxCell id="multiply" value="&amp;laquo;Concrete Strategy&amp;raquo;&lt;br&gt;&lt;b&gt;MultiplicationStrategy&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="860" y="680" width="390" height="86" />
+        </mxCell>
+        <mxCell id="multiply-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ execute(left: double, right: double): double&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="multiply">
+          <mxGeometry as="geometry" y="50" width="390" height="36" />
+        </mxCell>
+        <mxCell id="divide" value="&amp;laquo;Concrete Strategy&amp;raquo;&lt;br&gt;&lt;b&gt;DivisionStrategy&lt;/b&gt;" style="swimlane;html=1;startSize=50;horizontal=1;collapsible=0;rounded=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontStyle=0;fillColor=#f5f5f5;swimlaneFillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1270" y="680" width="390" height="86" />
+        </mxCell>
+        <mxCell id="divide-body" value="&lt;div style=&quot;padding:6px 8px&quot;&gt;+ execute(left: double, right: double): double&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;fontFamily=Arial;fontSize=14;spacing=0;" vertex="1" parent="divide">
+          <mxGeometry as="geometry" y="50" width="390" height="36" />
+        </mxCell>
+        <mxCell id="main-uses" value="dependency&lt;br&gt;new Calculator(...)&lt;br&gt;setStrategy(...), calculate(...)" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;exitX=0.5;exitY=1;entryX=0.35;entryY=0;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" source="main" target="context" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="demo-uses" value="dependency&lt;br&gt;new Calculator(...)&lt;br&gt;setStrategy(...), calculate(...)" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;exitX=0.5;exitY=1;entryX=0.8;entryY=0;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" source="demo" target="context" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="980" y="220" />
+              <mxPoint x="668" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="holds" value="association [1]&lt;br&gt;execute(left, right)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" source="context" target="strategy" parent="1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="add-implements" value="realization&lt;br&gt;implements OperationStrategy" style="edgeStyle=none;dashed=1;endArrow=block;endFill=0;exitX=0.5;exitY=0;entryX=0.15;entryY=1;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;labelBackgroundColor=#ffffff;" edge="1" source="add" target="strategy" parent="1">
+          <mxGeometry as="geometry" relative="1" x="-0.8" y="0">
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="subtract-implements" value="realization&lt;br&gt;implements OperationStrategy" style="edgeStyle=none;dashed=1;endArrow=block;endFill=0;exitX=0.5;exitY=0;entryX=0.38;entryY=1;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;labelBackgroundColor=#ffffff;" edge="1" source="subtract" target="strategy" parent="1">
+          <mxGeometry as="geometry" relative="1" x="-0.8" y="0">
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="multiply-implements" value="realization&lt;br&gt;implements OperationStrategy" style="edgeStyle=none;dashed=1;endArrow=block;endFill=0;exitX=0.5;exitY=0;entryX=0.62;entryY=1;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;labelBackgroundColor=#ffffff;" edge="1" source="multiply" target="strategy" parent="1">
+          <mxGeometry as="geometry" relative="1" x="-0.8" y="0">
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="divide-implements" value="realization&lt;br&gt;implements OperationStrategy" style="edgeStyle=none;dashed=1;endArrow=block;endFill=0;exitX=0.5;exitY=0;entryX=0.85;entryY=1;html=1;rounded=0;strokeColor=#333333;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;labelBackgroundColor=#ffffff;" edge="1" source="divide" target="strategy" parent="1">
+          <mxGeometry as="geometry" relative="1" x="-0.8" y="0">
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="Client creation dependencies to concrete strategies are omitted for readability&lt;br&gt;Dependency: dashed open arrow &amp;nbsp;&amp;nbsp; Association: solid open arrow &amp;nbsp;&amp;nbsp; Realization: dashed hollow triangle&lt;br&gt;Usage links name the invoked operations; realization means implementing the interface" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=15;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="180" y="840" width="1340" height="80" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
